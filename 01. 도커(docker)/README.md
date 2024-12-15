@@ -140,9 +140,9 @@ docker exec -it myhttpd2 bash
 - -i(--interactive) - 컨테이너의 표준 입력(stdin)을 활성화. (주로 -it 함께 사용)
 - -t(--tty) - tty(가상 터미널)을 할당. 리눅스에 키보드를 통해 표준 입력(stdin)이 전달할 수있게 한다. (주로 -it 함께 사용)
 
-
 ![스크린샷 2024-12-15 오후 11 06 16](https://github.com/user-attachments/assets/e78fc8e2-5d08-4205-a0e8-c434a08dc30d)
 
+## 도커 허브 – 도커 이미지 레지스트리
 
 
 
