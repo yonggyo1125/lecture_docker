@@ -104,10 +104,16 @@
 
 - **chcp 65001** 명령을 수행시킨 다음에 type 명령을 실행하면 한글이 깨지지 않고 잘 보인다.
 
-
 ![스크린샷 2024-12-15 오후 10 59 48](https://github.com/user-attachments/assets/0b5f1e2f-0ed8-472f-bd86-b20a44c0a3aa)
 
+```
+docker cp index.html myhttpd2:/usr/local/apache2/htdocs/
+```
+
+- 브라우저 주소창에 http://localhost:8071 입력 후 변경된 화면을 확인합니다.
 
 
+- docker cp 호스트경로 컨테이너이름:컨테이너경로
 
 
+- docker cp 컨테이너이름:컨테이너경로 호스트경로
