@@ -238,3 +238,8 @@ docker image ls
   - 컨테이너 C은 8082
 
 
+![스크린샷 2024-12-16 오전 7 03 51](https://github.com/user-attachments/assets/278de486-2160-4ae8-8f57-1d5aea7982d0)
+
+
+
+
