@@ -247,13 +247,11 @@ docker image ls
 
 ![스크린샷 2024-12-16 오전 7 06 14](https://github.com/user-attachments/assets/ce4cd741-449e-4186-81f5-a6c39bd6a486)
 
-
 ### NAT 와 포트포워딩
 
 - NAT(Network Address Translation)는 Network 계층의 주소(IP)를 변환시켜주는 기술이다.
 - <b>컨테이너 기반 가상화에서의 포트 포워딩(Port Forwarding)은 호스트와 컨테이너 사이에서 네트워크 트래픽을 전달하는 기술</b>이다. 컨테이너는 가상화된 환경에서 실행되는 독립적인 프로세스로, 컨테이너 내부에서 실행되는 애플리케이션은 호스트와 같은 IP 주소나 포트에 직접적으로 접근할 수 없다. 이를 해결하기 위해 <b>컨테이너의 포트와 호스트의 포트를 매핑</b>해주는 것이 포트 포워딩이다.
 - <b>포트 포워딩은 NAT를 지원하는 장치에서 설정 가능하며 특정 포트를 Open하고 해당 포트로 들어오는 모든 패킷을 내부의 사설 IP와 포트로 전달해주는 기능</b>이다.
-
 
 ![스크린샷 2024-12-16 오전 7 10 12](https://github.com/user-attachments/assets/159fd4c8-c510-4963-8f7f-e94505f5ac9a)
 ![스크린샷 2024-12-16 오전 7 10 25](https://github.com/user-attachments/assets/54a86ac1-6956-4e29-a7c8-89733ac7f3f3)
@@ -265,16 +263,40 @@ docker image ls
 ![스크린샷 2024-12-16 오전 7 12 44](https://github.com/user-attachments/assets/e074f525-0454-4a7d-af8d-d6ee55ac2fd4)
 ![스크린샷 2024-12-16 오전 7 13 30](https://github.com/user-attachments/assets/e18ad073-c5c6-49c5-b471-1a174ff1cd59)
 
-
 ![스크린샷 2024-12-16 오전 7 13 38](https://github.com/user-attachments/assets/85cdf37d-4202-4d8a-81fd-72362d0ea3eb)
 
-
 ### 도커 네트워크 생성/삭제
+
 - 도커는 네트워크를 직접 생성하지 않아도 기본 네트워크가 자동으로 세 개 만들어짐
 - 네트워크를 명시적으로 지정하지 않고 Docker 컨테이너를 시작하면 <b>기본값인 “bridge” 네트워크 로 Docker 컨테이너를 시작</b> 함
 
 ![스크린샷 2024-12-16 오전 7 17 17](https://github.com/user-attachments/assets/b57aa635-fc57-4d5b-851e-78b58b93436e)
+
+- 컨테이너에 의해 기동된 일부 서버들 만의 통신망을 구축하기 위해서 가상의 네트워크를 정의하여 사용할 수 있음
+- 네트워크 생성 명령
+
+```
+docker network create 네트워크이름
+```
+
+- 네트워크 삭제 명령
+
+```
+docker network rm 네트워크이름
+```
+
+- 기타 네트워크 관련 명령
+
 ![스크린샷 2024-12-16 오전 7 17 49](https://github.com/user-attachments/assets/0406c30d-5401-4d16-8903-7695adc236c5)
 
+- MySQL 컨테이너 생성 및 실행
 
+```
+docker run --name 컨테이너이름 –dit --net=네트워크이름 ……… mysql
+```
 
+## 도커 컨테이너의 저장소
+
+- <b>Docker 컨테이너(container)에 쓰여진 데이터는 컨테이너가 삭제될 때 함께 사라지게</b> 된다.
+- Docker에서 돌아가는 많은 애플리케이션이 컨테이너의 생명 주기와 관계없이 <b>데이터를 영속적으로 저장을 해야 하는 경우, 그리고 여러 개의 Docker 컨테이너가 하나의 저장 공간을 공유해서 데이터를 읽거나 써야 하는 경우</b>가 있다.
+- 이렇게 Docker 컨테이너의 생명 주기와 관계없이 데이터를 영속적으로 저장할 수 있도록 Docker는 두가지 옵션을 제공하며 <b>Docker 볼륨(volume)</b>과 <b>바인드 마운트(bind mount)</b>이다.
