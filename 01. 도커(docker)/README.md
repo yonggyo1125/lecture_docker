@@ -198,5 +198,19 @@ docker exec -it myhttpd2 bash
 ![스크린샷 2024-12-15 오후 11 27 35](https://github.com/user-attachments/assets/e34ffdfd-2d44-4e33-afe1-b3d9eb52d1ce)
 ![스크린샷 2024-12-15 오후 11 27 47](https://github.com/user-attachments/assets/aef5fe15-f67e-464c-941a-83f3b0d49a83)
 
+## 이미지 삭제
+
+- 컨테이너를 삭제해도 이미지는 남아있으므로 불필요한 이미지는 즉시 삭제하는 것이 좋다.
+- 해당 이미지를 사용하는 컨테이너가 남아 있으면 이미지 삭제는 불가하다.
+- 이미지 삭제 명령
+
+```
+docker image rm 이미지명 [이미지명 . . .]
+```
+- 이미지 조회 명령
+
+```
+docker image ls
+```
 
 
