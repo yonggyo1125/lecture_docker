@@ -213,3 +213,7 @@ docker image ls
 ## 도커로 mysql 이미지 다운로드 : docker pull mysql
 
 - 다운로드된 이미지 확인 : docker images 또는 docker image ls
+
+![스크린샷 2024-12-15 오후 11 31 44](https://github.com/user-attachments/assets/6e94497a-c26a-477a-bfaf-f13969f3b358)
+
+
