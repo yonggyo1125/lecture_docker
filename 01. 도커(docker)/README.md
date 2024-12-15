@@ -35,3 +35,9 @@
 
 ## 가상머신(VM) 기반 가상화와 도커(컨테이너) 기반 가상화 비교
 
+![스크린샷 2024-12-15 오후 10 29 02](https://github.com/user-attachments/assets/230b3db3-23fc-4278-8b1d-dc27825037eb)
+
+![스크린샷 2024-12-15 오후 10 29 24](https://github.com/user-attachments/assets/ba2e368f-3c9e-46d3-9bc2-bf14da9a8f20)
+
+
+
