@@ -88,3 +88,9 @@
 
 ## WSL 2 및 Hyper-V
 
+![스크린샷 2024-12-15 오후 10 52 26](https://github.com/user-attachments/assets/02769a19-659f-4536-bbe5-d77b75055e70)
+![스크린샷 2024-12-15 오후 10 53 47](https://github.com/user-attachments/assets/e78907ef-87ad-4567-b530-49d9a031ed97)
+![스크린샷 2024-12-15 오후 10 54 08](https://github.com/user-attachments/assets/24a4caac-229a-4fa4-9ade-641d55292711)
+
+
+
