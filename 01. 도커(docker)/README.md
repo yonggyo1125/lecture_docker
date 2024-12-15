@@ -105,5 +105,9 @@
 - **chcp 65001** 명령을 수행시킨 다음에 type 명령을 실행하면 한글이 깨지지 않고 잘 보인다.
 
 
+![스크린샷 2024-12-15 오후 10 59 48](https://github.com/user-attachments/assets/0b5f1e2f-0ed8-472f-bd86-b20a44c0a3aa)
+
+
+
 
 
