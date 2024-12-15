@@ -123,8 +123,10 @@ docker cp index.html myhttpd2:/usr/local/apache2/htdocs/
 
 ## docker run 의 주요 옵션
 
-- 동작 중인 컨테이너는 삭제 불가능 -> 컨테이너 정지 후 삭제
+![스크린샷 2024-12-15 오후 11 04 09](https://github.com/user-attachments/assets/b274af25-3503-4c11-8fdf-3b9691d03b78)
 
+
+- 동작 중인 컨테이너는 삭제 불가능 -> 컨테이너 정지 후 삭제
 
 ```
 docker stop 컨테이너이름 & docker rm 컨테이너이름
@@ -137,4 +139,5 @@ docker exec -it myhttpd2 bash
 ```
 - -i(--interactive) - 컨테이너의 표준 입력(stdin)을 활성화. (주로 -it 함께 사용)
 - -t(--tty) - tty(가상 터미널)을 할당. 리눅스에 키보드를 통해 표준 입력(stdin)이 전달할 수있게 한다. (주로 -it 함께 사용)
+
 
