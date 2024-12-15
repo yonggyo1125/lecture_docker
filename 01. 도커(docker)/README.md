@@ -123,3 +123,7 @@ docker cp index.html myhttpd2:/usr/local/apache2/htdocs/
 
 ## docker run 의 주요 옵션
 
+![스크린샷 2024-12-15 오후 11 04 09](https://github.com/user-attachments/assets/b274af25-3503-4c11-8fdf-3b9691d03b78)
+
+
+
