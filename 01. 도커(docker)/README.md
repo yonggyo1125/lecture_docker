@@ -25,3 +25,8 @@
 ![스크린샷 2024-12-15 오후 10 23 52](https://github.com/user-attachments/assets/a0df0aee-5b10-4cc8-bd0c-9aa7b7f45c1c)
 
 - **하이퍼바이저**는 호스트 컴퓨터에서 다수의 운영 체제를 동시에 실행하기 위한 논리적 플랫폼을 말한다. 가상화 머신 모니터 또는 가상화 머신 매니저라고도 부른다.
+
+![스크린샷 2024-12-15 오후 10 25 55](https://github.com/user-attachments/assets/02269daf-91fc-411f-a345-5190e594dde0)
+
+<br>
+![스크린샷 2024-12-15 오후 10 26 12](https://github.com/user-attachments/assets/3cd0d0b8-84f4-4112-a48b-69497a606929)
