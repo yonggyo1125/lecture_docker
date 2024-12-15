@@ -58,5 +58,9 @@
 ![스크린샷 2024-12-15 오후 10 33 28](https://github.com/user-attachments/assets/68fb03d3-2bf5-47e0-a370-8d97e36a0329)
 
 
+## 도커 허브(https://hub.docker.com) 
+
+- <b>도커 레지스터리(이미지를 배포하는 사이트)</b>
+- 공개된 컨테이너 이미지가 모여 있는 사이트
 
 
