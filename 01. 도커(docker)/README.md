@@ -232,9 +232,13 @@ docker image ls
 
 ![스크린샷 2024-12-16 오전 7 01 24](https://github.com/user-attachments/assets/f232a7fc-6fa6-4e71-89b4-1ae50a0ff0bd)
 
-- 여러 개의 웹 서버 컨테이너 구동 시 호스트_포트번호는 다르게 구성
+- 여러 개의 웹 서버 컨테이너 구동 시 호스트\_포트번호는 다르게 구성
+
   - 컨테이너 A는 8080
   - 컨테이너 B는 8081
   - 컨테이너 C은 8082
 
+- 웹 브라우저를 이용한 접근
+  - http://localhost:8081, http://localhost:8082 로 접근
 
+### 공인 IP 와 사설 IP
