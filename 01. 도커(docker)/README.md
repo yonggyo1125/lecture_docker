@@ -257,7 +257,13 @@ docker image ls
 
 ![스크린샷 2024-12-16 오전 7 10 12](https://github.com/user-attachments/assets/159fd4c8-c510-4963-8f7f-e94505f5ac9a)
 ![스크린샷 2024-12-16 오전 7 10 25](https://github.com/user-attachments/assets/54a86ac1-6956-4e29-a7c8-89733ac7f3f3)
+
+- <b>브릿지 네트워크(Bridge)</b> : 도커 브릿지를 활용해 건테이너간 통신, NAT 및 포트 포워딩 기술을 활용해 외부 통신 지원
+
 ![스크린샷 2024-12-16 오전 7 10 47](https://github.com/user-attachments/assets/f04243b8-4ddc-4f68-9c4b-1ebffd047ec4)
+
+
+
 
 
 
