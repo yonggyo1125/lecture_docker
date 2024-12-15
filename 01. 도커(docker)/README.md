@@ -193,3 +193,10 @@ docker exec -it myhttpd2 bash
 
 - 이미지의 **레이어 구조는 재활용에 유리하며 효율적인 데이터 저장과 전송을 지원**한다. 이미지 레이어는 이전 레이어의 변경 사항을 저장한다. **컨테이너 실행 시 읽기, 쓰기가 가능한 새로운 레이어가 추가**된다.(**컨테이너 레이어**)
 
+
+![스크린샷 2024-12-15 오후 11 27 27](https://github.com/user-attachments/assets/0a140d78-6e7a-4137-a449-adf21fda4d2e)
+![스크린샷 2024-12-15 오후 11 27 35](https://github.com/user-attachments/assets/e34ffdfd-2d44-4e33-afe1-b3d9eb52d1ce)
+![스크린샷 2024-12-15 오후 11 27 47](https://github.com/user-attachments/assets/aef5fe15-f67e-464c-941a-83f3b0d49a83)
+
+
+
