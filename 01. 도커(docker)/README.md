@@ -238,7 +238,12 @@ docker image ls
   - 컨테이너 B는 8081
   - 컨테이너 C은 8082
 
+  ![스크린샷 2024-12-16 오전 7 03 51](https://github.com/user-attachments/assets/278de486-2160-4ae8-8f57-1d5aea7982d0)
+
 - 웹 브라우저를 이용한 접근
   - http://localhost:8081, http://localhost:8082 로 접근
 
 ### 공인 IP 와 사설 IP
+
+
+
