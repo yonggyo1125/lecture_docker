@@ -65,3 +65,10 @@
 
 
 ![스크린샷 2024-12-15 오후 10 36 04](https://github.com/user-attachments/assets/55f31396-10aa-433a-a921-9a274900c873)
+
+## Docker Desktop 설치
+
+- Docker Desktop은 Mac, Linux, Windows 환경에서 컨테이너 이미지 빌드, 실행, 공유 등을 도와주는 애플리케이션이다. 컨테이너, 애플리케이션, 이미지를 머신에서 직접 관리할 수 있는 간단한 GUI(그래픽 사용자 인터페이스)를 제공한다.
+- https://docs.docker.com/get-started/get-docker/ 페이지에서도 각 운영체제별 설치 프로그램을 다운로드할 수 있다.
+- 도커 설치가 완료 되면 cmd창을 재기동한 후에 다음 명령을 실행하여 도커의 버전을 확인한다.
+
