@@ -93,4 +93,8 @@
 ![스크린샷 2024-12-15 오후 10 54 08](https://github.com/user-attachments/assets/24a4caac-229a-4fa4-9ade-641d55292711)
 
 
+## docker \[container\] run 옵션
+- 도커 컨테이너 생성 및 실행 기능, 필요시 이미지 다운로드 기능도 수행
+- docker pull + docker create + docker start
+
 
