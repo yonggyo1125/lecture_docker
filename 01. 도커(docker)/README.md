@@ -303,8 +303,53 @@ docker run --name 컨테이너이름 –dit --net=네트워크이름 ……… m
 
 
 ![스크린샷 2024-12-16 오전 7 22 55](https://github.com/user-attachments/assets/559fb667-0727-4824-b1f7-9aba3468a06c)
+
+### Docker 볼륨
+
+- <b>도커 엔진이 관리하는 영역 내</b>에 만들어진 <b>볼륨을 컨테이너에 디스크 형태로 마운트하여 사용</b>
+- 직접 조작이 어려우므로 주로 ‘임시 목적’ 또는 ‘자주 쓰지는 않지만 지우면 안되는 파일을 저장’ 하는 목적으로 사용
+- 도커 엔진에 의해 관리
+  - 리눅스 경우 /var/lib/docker/volumns
+  - <b>도커 데스크톱의 경우 도커 엔진의 관리영역</b>
+- 운영체제와 무관하게 일관성 있는 방식으로 작업
+- <b>도커 제작사에서 추천하는 방식</b>
+- 도커 컨테이너를 이용하지 않고는 접근 불가능
+- 백업 절차 복잡
+
 ![스크린샷 2024-12-16 오전 7 23 04](https://github.com/user-attachments/assets/667e83e9-caff-4ba1-b573-7a59222ab7b1)
+
+
 ![스크린샷 2024-12-16 오전 7 23 11](https://github.com/user-attachments/assets/8a645299-ed74-40c1-9616-afb685b9b031)
+
+### Docker 볼륨 생성 방법
+
+```
+docker volumn create 볼륨이름
+docker volumn rm 볼륨이름
+```
+
 ![스크린샷 2024-12-16 오전 7 23 19](https://github.com/user-attachments/assets/c3eb517c-7c1f-47ee-9af4-53065100c8b6)
 
 
+-  Docker 볼륨 설정 명령
+
+```
+docker run . . . –v 볼륨_이름:컨테이너_마운트_경로 . . .
+```
+
+## mysql 서버를 도커 컨테이너로 기동하기
+
+- 기동되어 있는 MySQL 서버를 종료한다.
+
+- MySQL 에서 사용할 볼륨을 생성한다.
+
+```
+docker volume create vtest
+```
+
+- 생성된 볼륨을 지정하여 mysql 도커 이미지를 가지고 도커 컨테이너를 기동한다.
+
+```
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -v vtest:/var/lib/mysql --
+name mysql_db -e TZ=Asia/Seoul mysql
+```
