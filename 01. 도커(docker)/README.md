@@ -164,4 +164,7 @@ docker exec -it myhttpd2 bash
 
 ![스크린샷 2024-12-15 오후 11 13 44](https://github.com/user-attachments/assets/3f54b1eb-bd2f-428e-ad2a-9839177eda4e)
 
+![스크린샷 2024-12-15 오후 11 16 47](https://github.com/user-attachments/assets/5f138bc9-a195-4d42-bdba-12686db3af4e)
+
+
 
