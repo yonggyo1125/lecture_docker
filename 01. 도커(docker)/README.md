@@ -189,3 +189,5 @@ docker exec -it myhttpd2 bash
 - **ubuntu 이미지가 기존에 존재하는데 nginx 이미지를 다운 받을 경우 nginx 레이어만 다운받게 된다.** Docker 이미지는 위 그림처럼 여러 레이어로 구성되며, 각 레이어는 이전 레이어의 변경사항을 가지고 있다. 여러 개의 레이어에는 읽기 전용인 read only 레이어와, 새로 변경되거나 추가된
 내용을 담은 새로운 레이어로 구성된다.
 
+![스크린샷 2024-12-15 오후 11 25 20](https://github.com/user-attachments/assets/c6b41eb6-2a18-41b5-8df2-b6981c9863b0)
+
