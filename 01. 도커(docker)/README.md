@@ -148,6 +148,7 @@ docker exec -it myhttpd2 bash
 ![스크린샷 2024-12-15 오후 11 09 37](https://github.com/user-attachments/assets/9dd4b637-730b-4fc5-b81a-591c7e1664a8)
 ![스크린샷 2024-12-15 오후 11 10 16](https://github.com/user-attachments/assets/8f513909-16f7-494a-a7ff-40261a6408d4)
 
+## 이미지명 규칙
 
 
 
