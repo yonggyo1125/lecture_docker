@@ -115,5 +115,12 @@ docker cp index.html myhttpd2:/usr/local/apache2/htdocs/
 
 - docker cp 호스트경로 컨테이너이름:컨테이너경로
 
+![스크린샷 2024-12-15 오후 11 02 17](https://github.com/user-attachments/assets/730c7a69-b78e-4253-853a-8406b4468427)
+
+
 
 - docker cp 컨테이너이름:컨테이너경로 호스트경로
+
+![스크린샷 2024-12-15 오후 11 02 22](https://github.com/user-attachments/assets/f2089f55-e7d9-4655-9fe5-035fadf1d740)
+
+
