@@ -213,4 +213,8 @@ docker image rm 이미지명 [이미지명 . . .]
 docker image ls
 ```
 
+![스크린샷 2024-12-15 오후 11 29 55](https://github.com/user-attachments/assets/e77db169-d048-41de-bb44-4ad1cfb05062)
+
+
+
 
