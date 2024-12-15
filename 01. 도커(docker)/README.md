@@ -245,5 +245,6 @@ docker image ls
 
 ### 공인 IP 와 사설 IP
 
+![스크린샷 2024-12-16 오전 7 06 14](https://github.com/user-attachments/assets/ce4cd741-449e-4186-81f5-a6c39bd6a486)
 
 
