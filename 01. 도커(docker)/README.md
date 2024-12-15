@@ -74,10 +74,17 @@
 
 
 ![스크린샷 2024-12-15 오후 10 48 46](https://github.com/user-attachments/assets/0d1fce62-9c99-4d0b-a228-376a1977eb79)
+
 ![스크린샷 2024-12-15 오후 10 48 56](https://github.com/user-attachments/assets/86f1d177-e47c-4e4c-bd5c-18bf00c64ac1)
+
+## 윈도우용/macOS용 도커 사용하기
+
+- 리눅스 운영체제가 들어있는 패키지, ‘도커 데스크톱’ 이용
+
 ![스크린샷 2024-12-15 오후 10 49 04](https://github.com/user-attachments/assets/5e629fda-0aa3-4447-a4e5-f02dd2f39bbc)
 
 
+- **도커는 리눅스 기반**의 컨테이너 기술이므로 Windows에서 Docker을 사용하려면 리눅스 커널에 접근할 수 있는 방법인 WSL2를 사용한다. WSL 이란 리눅스용 윈도우 하위 시스템 <b>(Windows Subsystem for Linux)</b>으로서 윈도우 10과 윈도우 11에서 네이티브로 리눅스 실행 파일을 실행하기 위한 호환성 계층이다. 또한 도커 데스크톱은 **Hyper-V**를 사용하여 가상화를 수행할 수도 있어서 리눅스용 윈도우 하위 시스템(WSL)을 별도로 사용하지 않고도 가상화를 처리할 수 있다.
 
-
+## WSL 2 및 Hyper-V
 
