@@ -262,8 +262,11 @@ docker image ls
 
 ![스크린샷 2024-12-16 오전 7 10 47](https://github.com/user-attachments/assets/f04243b8-4ddc-4f68-9c4b-1ebffd047ec4)
 
+![스크린샷 2024-12-16 오전 7 12 44](https://github.com/user-attachments/assets/e074f525-0454-4a7d-af8d-d6ee55ac2fd4)
+![스크린샷 2024-12-16 오전 7 13 30](https://github.com/user-attachments/assets/e18ad073-c5c6-49c5-b471-1a174ff1cd59)
 
 
+![스크린샷 2024-12-16 오전 7 13 38](https://github.com/user-attachments/assets/85cdf37d-4202-4d8a-81fd-72362d0ea3eb)
 
 
 
