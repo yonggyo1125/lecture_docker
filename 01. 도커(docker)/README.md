@@ -144,6 +144,9 @@ docker exec -it myhttpd2 bash
 
 ## 도커 허브 – 도커 이미지 레지스트리
 
+![스크린샷 2024-12-15 오후 11 09 25](https://github.com/user-attachments/assets/1858e1ca-2b9a-4da2-b453-145788905a6b)
+![스크린샷 2024-12-15 오후 11 09 37](https://github.com/user-attachments/assets/9dd4b637-730b-4fc5-b81a-591c7e1664a8)
+![스크린샷 2024-12-15 오후 11 10 16](https://github.com/user-attachments/assets/8f513909-16f7-494a-a7ff-40261a6408d4)
 
 
 
