@@ -72,3 +72,12 @@
 - https://docs.docker.com/get-started/get-docker/ 페이지에서도 각 운영체제별 설치 프로그램을 다운로드할 수 있다.
 - 도커 설치가 완료 되면 cmd창을 재기동한 후에 다음 명령을 실행하여 도커의 버전을 확인한다.
 
+
+![스크린샷 2024-12-15 오후 10 48 46](https://github.com/user-attachments/assets/0d1fce62-9c99-4d0b-a228-376a1977eb79)
+![스크린샷 2024-12-15 오후 10 48 56](https://github.com/user-attachments/assets/86f1d177-e47c-4e4c-bd5c-18bf00c64ac1)
+![스크린샷 2024-12-15 오후 10 49 04](https://github.com/user-attachments/assets/5e629fda-0aa3-4447-a4e5-f02dd2f39bbc)
+
+
+
+
+
