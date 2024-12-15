@@ -341,15 +341,28 @@ docker run . . . –v 볼륨_이름:컨테이너_마운트_경로 . . .
 
 - 기동되어 있는 MySQL 서버를 종료한다.
 
+
+![스크린샷 2024-12-16 오전 7 31 15](https://github.com/user-attachments/assets/13facb7a-735d-497b-8a16-948c41d1a960)
+
+
 - MySQL 에서 사용할 볼륨을 생성한다.
+
 
 ```
 docker volume create vtest
 ```
 
+![스크린샷 2024-12-16 오전 7 31 40](https://github.com/user-attachments/assets/b986e2d3-9890-4985-b47e-c8574ad4bbaf)
+
+
 - 생성된 볼륨을 지정하여 mysql 도커 이미지를 가지고 도커 컨테이너를 기동한다.
+
 
 ```
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -v vtest:/var/lib/mysql --
 name mysql_db -e TZ=Asia/Seoul mysql
 ```
+
+![스크린샷 2024-12-16 오전 7 32 52](https://github.com/user-attachments/assets/e4b59120-e7d1-4f77-99af-69c9a8d67eb5)
+
+
