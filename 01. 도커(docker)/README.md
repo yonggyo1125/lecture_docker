@@ -230,4 +230,9 @@ docker image ls
 ![스크린샷 2024-12-16 오전 6 59 39](https://github.com/user-attachments/assets/654d4ac8-db14-422b-a9ea-8f7580a277b3)
 
 
+![스크린샷 2024-12-16 오전 7 01 24](https://github.com/user-attachments/assets/f232a7fc-6fa6-4e71-89b4-1ae50a0ff0bd)
+
+
+
+
 
