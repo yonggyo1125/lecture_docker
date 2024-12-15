@@ -300,3 +300,11 @@ docker run --name 컨테이너이름 –dit --net=네트워크이름 ……… m
 - <b>Docker 컨테이너(container)에 쓰여진 데이터는 컨테이너가 삭제될 때 함께 사라지게</b> 된다.
 - Docker에서 돌아가는 많은 애플리케이션이 컨테이너의 생명 주기와 관계없이 <b>데이터를 영속적으로 저장을 해야 하는 경우, 그리고 여러 개의 Docker 컨테이너가 하나의 저장 공간을 공유해서 데이터를 읽거나 써야 하는 경우</b>가 있다.
 - 이렇게 Docker 컨테이너의 생명 주기와 관계없이 데이터를 영속적으로 저장할 수 있도록 Docker는 두가지 옵션을 제공하며 <b>Docker 볼륨(volume)</b>과 <b>바인드 마운트(bind mount)</b>이다.
+
+
+![스크린샷 2024-12-16 오전 7 22 55](https://github.com/user-attachments/assets/559fb667-0727-4824-b1f7-9aba3468a06c)
+![스크린샷 2024-12-16 오전 7 23 04](https://github.com/user-attachments/assets/667e83e9-caff-4ba1-b573-7a59222ab7b1)
+![스크린샷 2024-12-16 오전 7 23 11](https://github.com/user-attachments/assets/8a645299-ed74-40c1-9616-afb685b9b031)
+![스크린샷 2024-12-16 오전 7 23 19](https://github.com/user-attachments/assets/c3eb517c-7c1f-47ee-9af4-53065100c8b6)
+
+
