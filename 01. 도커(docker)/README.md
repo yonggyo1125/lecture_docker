@@ -151,11 +151,17 @@ docker exec -it myhttpd2 bash
 ## 이미지명 규칙
 
 ![스크린샷 2024-12-15 오후 11 12 07](https://github.com/user-attachments/assets/6641eb5a-c306-4b22-8d91-f99f338a229e)
+
+- docker pull httpd 에서 이미지명 **httpd** 는 <b>docker.io/library/httpd:latest</b> 를 의미함.
+
 ![스크린샷 2024-12-15 오후 11 12 52](https://github.com/user-attachments/assets/ef191be0-bad3-4b68-9a9f-3421fab9f1d0)
 ![스크린샷 2024-12-15 오후 11 13 04](https://github.com/user-attachments/assets/ebbea8b4-7b56-4f8a-aa66-f7866c867899)
 ![스크린샷 2024-12-15 오후 11 13 13](https://github.com/user-attachments/assets/338c795a-c8c3-41aa-a172-0aaee03d6968)
 ![스크린샷 2024-12-15 오후 11 13 23](https://github.com/user-attachments/assets/68c88582-cde5-4238-b532-cdd536d0b23b)
 ![스크린샷 2024-12-15 오후 11 13 31](https://github.com/user-attachments/assets/0f9d898a-c812-4dc4-9a11-d17994e2fb83)
+
+## 컨테이너 라이프사이클
+
 ![스크린샷 2024-12-15 오후 11 13 44](https://github.com/user-attachments/assets/3f54b1eb-bd2f-428e-ad2a-9839177eda4e)
 
 
