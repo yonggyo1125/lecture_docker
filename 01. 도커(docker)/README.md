@@ -273,4 +273,8 @@ docker image ls
 - 도커는 네트워크를 직접 생성하지 않아도 기본 네트워크가 자동으로 세 개 만들어짐
 - 네트워크를 명시적으로 지정하지 않고 Docker 컨테이너를 시작하면 <b>기본값인 “bridge” 네트워크 로 Docker 컨테이너를 시작</b> 함
 
+![스크린샷 2024-12-16 오전 7 17 17](https://github.com/user-attachments/assets/b57aa635-fc57-4d5b-851e-78b58b93436e)
+![스크린샷 2024-12-16 오전 7 17 49](https://github.com/user-attachments/assets/0406c30d-5401-4d16-8903-7695adc236c5)
+
+
 
