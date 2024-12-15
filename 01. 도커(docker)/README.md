@@ -17,5 +17,9 @@
 
 ## 가상화란?
 
+![스크린샷 2024-12-15 오후 10 22 59](https://github.com/user-attachments/assets/1a81e052-f5b9-43ca-979f-78872f6cdd21)
+
 
 ## 가상 머신과 도커 컨테이너 비교
+
+![스크린샷 2024-12-15 오후 10 23 52](https://github.com/user-attachments/assets/a0df0aee-5b10-4cc8-bd0c-9aa7b7f45c1c)
