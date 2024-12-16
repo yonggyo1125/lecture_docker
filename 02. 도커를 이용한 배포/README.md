@@ -369,3 +369,8 @@ docker import [파일_이름.tar or URL] - [image name[:tag name]]
 ![스크린샷 2024-12-17 오전 7 15 39](https://github.com/user-attachments/assets/6028a329-ca15-4ee6-940d-d41d53eea231)
 
 
+## 컨테이너 개조 방법(두 가지 방법 혼용)
+
+- 파일 복사와 마운트
+- 컨테이너에서 리눅스 명령 이용
+
