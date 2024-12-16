@@ -328,6 +328,11 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 - 레지스터리 : 이미지를 배포하는 장소 (도커허브에 회원 가입하면서 생성되는 계정명의 이름공간)
 - 리포지터리 : 레지스트리를 구성하는 단위
 
+![스크린샷 2024-12-17 오전 7 07 04](https://github.com/user-attachments/assets/dba8df10-7511-49ee-b716-d422f15be667)
+
+![스크린샷 2024-12-17 오전 7 07 18](https://github.com/user-attachments/assets/fd8d348a-7e9c-451e-83dc-2c62f2313362)
+
+
 ## 이미지를 파일로 저장하기와 읽어 들이기
 
 - 이미지를 호스트 컴퓨터의 파일시스템에 tar 형식으로 저장하는 것이 가능하다.
@@ -343,4 +348,3 @@ docker save 이미지_이름 > 파일_이름.tar
 docker load -i 파일_이름.tar
 docker load < 파일_이름.tar
 ```
-
