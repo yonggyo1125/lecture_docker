@@ -374,3 +374,11 @@ docker import [파일_이름.tar or URL] - [image name[:tag name]]
 - 파일 복사와 마운트
 - 컨테이너에서 리눅스 명령 이용
 
+![스크린샷 2024-12-17 오전 7 17 43](https://github.com/user-attachments/assets/9ba127b0-ba67-4f84-8b64-49fbae832302)
+![스크린샷 2024-12-17 오전 7 18 23](https://github.com/user-attachments/assets/13628900-6f49-40dd-ad18-405127da55bb)
+
+
+
+
+
+
