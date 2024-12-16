@@ -365,3 +365,7 @@ docker export [컨테이너명 or 컨테이너ID] > 파일_이름.tar
 ```
 docker import [파일_이름.tar or URL] - [image name[:tag name]]
 ```
+
+![스크린샷 2024-12-17 오전 7 15 39](https://github.com/user-attachments/assets/6028a329-ca15-4ee6-940d-d41d53eea231)
+
+
