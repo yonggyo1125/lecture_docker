@@ -310,7 +310,17 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 - https://github.com/topics/dockerfile-examples?o=desc&s=updated
 
 
+![스크린샷 2024-12-16 오후 11 27 44](https://github.com/user-attachments/assets/23e3730e-ceb9-4b67-8117-6d38f00903ec)
 
 
 ### 커밋과 빌드
+
+
+![스크린샷 2024-12-16 오후 11 28 01](https://github.com/user-attachments/assets/74d6a5a8-3d04-4eaf-8d16-1f91733fdf9b)
+
+
+![스크린샷 2024-12-16 오후 11 28 15](https://github.com/user-attachments/assets/63c9bb15-4fbb-436e-82ab-000818ce2c1b)
+
+
+
 
