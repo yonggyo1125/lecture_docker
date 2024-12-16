@@ -352,4 +352,16 @@ docker load < 파일_이름.tar
 ![스크린샷 2024-12-17 오전 7 11 53](https://github.com/user-attachments/assets/28c57815-0e9a-415b-bce0-433e5f6e7aee)
 
 
+## 컨테이너를 파일로 저장하기와 읽어들이기
 
+- 컨테이너를 파일로 저장
+
+```
+docker export [컨테이너명 or 컨테이너ID] > 파일_이름.tar
+```
+
+- 저장한 컨테이너를 도커 이미지로 읽어 들임
+
+```
+docker import [파일_이름.tar or URL] - [image name[:tag name]]
+```
