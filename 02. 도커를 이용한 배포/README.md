@@ -93,7 +93,6 @@ FROM openjdk:17-jdk
 
 - WORKDIR 명령문은 쉘(shell)의 cd 명령문처럼 컨테이너 상에서 **작업 디텍토리로 전환**을 위해서 사용된다. WORKDIR 명령문으로 작업 디렉터리를 전환하면 그 이후에 등장하는 모든 RUN, CMD, ENTRYPOINT, COPY, ADD 명령문은 해당 디렉터리를 기준으로 실행된다. 즉, WORKDIR은 도커 이미지의 어디에서 작업을 할지를 의미한다.
 
-
 ```
 WORKDIR <이동할 경로>
 ```
@@ -130,7 +129,6 @@ RUN npm install --silent
 ```
 RUN pip install -r requirements.txt
 ```
-
 
 #### ENTRYPOINT 명령문
 
@@ -278,6 +276,7 @@ $ docker build --build-arg port=8080 .
 ```
 ARG port=8080
 ```
+
 - 설정된 인자 값은 다음과 같이 ${인자명} 형태로 읽어서 사용할 수 있다.
 
 ```
@@ -285,7 +284,6 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 ```
 
 - **ENV와 달리 ARG로 설정한 값은 이미지가 빌드되는 동안에만 유효**하다.
-
 
 #### .dockerignore 파일
 
@@ -299,29 +297,22 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 ```
 
 - 이렇게 설정을 해주면 Docker는 프로젝트 최상위 디렉터리에 위치하고 있는 markdown 파일들을 무시하게 되므로, RUN과 CMD, COPY와 같은 명령문이 해당 파일을 사용할 수 없게 된다.
- 
 
 ![스크린샷 2024-12-16 오후 11 25 38](https://github.com/user-attachments/assets/e1ced8c5-22ab-48fc-86a3-9f22cd68a93a)
 
-### (*) Docker 파일 작성시 참고할 사이트
+### (\*) Docker 파일 작성시 참고할 사이트
 
 - https://docs.docker.com/reference/
 - https://github.com/komljen/dockerfile-examples
 - https://github.com/topics/dockerfile-examples?o=desc&s=updated
 
-
 ![스크린샷 2024-12-16 오후 11 27 44](https://github.com/user-attachments/assets/23e3730e-ceb9-4b67-8117-6d38f00903ec)
-
 
 ### 커밋과 빌드
 
-
 ![스크린샷 2024-12-16 오후 11 28 01](https://github.com/user-attachments/assets/74d6a5a8-3d04-4eaf-8d16-1f91733fdf9b)
 
-
 ![스크린샷 2024-12-16 오후 11 28 15](https://github.com/user-attachments/assets/63c9bb15-4fbb-436e-82ab-000818ce2c1b)
-
-
 
 ## 레지스트리와 리포지터리
 
@@ -331,7 +322,6 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 ![스크린샷 2024-12-17 오전 7 07 04](https://github.com/user-attachments/assets/dba8df10-7511-49ee-b716-d422f15be667)
 
 ![스크린샷 2024-12-17 오전 7 07 18](https://github.com/user-attachments/assets/fd8d348a-7e9c-451e-83dc-2c62f2313362)
-
 
 ## 이미지를 파일로 저장하기와 읽어 들이기
 
@@ -351,7 +341,6 @@ docker load < 파일_이름.tar
 
 ![스크린샷 2024-12-17 오전 7 11 53](https://github.com/user-attachments/assets/28c57815-0e9a-415b-bce0-433e5f6e7aee)
 
-
 ## 컨테이너를 파일로 저장하기와 읽어들이기
 
 - 컨테이너를 파일로 저장
@@ -368,17 +357,47 @@ docker import [파일_이름.tar or URL] - [image name[:tag name]]
 
 ![스크린샷 2024-12-17 오전 7 15 39](https://github.com/user-attachments/assets/6028a329-ca15-4ee6-940d-d41d53eea231)
 
-
 ## 컨테이너 개조 방법(두 가지 방법 혼용)
 
 - 파일 복사와 마운트
 - 컨테이너에서 리눅스 명령 이용
 
 ![스크린샷 2024-12-17 오전 7 17 43](https://github.com/user-attachments/assets/9ba127b0-ba67-4f84-8b64-49fbae832302)
+
+## 컨테이너에서 리눅스 명령 실행
+
+- 리눅스 명령 실행을 위해 bash 쉘 필요 (/bin/bash)
+- docker run 또는 **docker exec** 명령을 이용하여 실행
+  - 컨테이너 속에서 명령을 실행하는 명령 실행 중인 컨테이너에 사용
+- bash를 이용하여 변경이 완료되면 docker start 명령으로 재시작 필요
+
 ![스크린샷 2024-12-17 오전 7 18 23](https://github.com/user-attachments/assets/13628900-6f49-40dd-ad18-405127da55bb)
 
+- docker exec 명령
 
+```
+docker exec [옵션] 컨테이너_이름 /bin/bash
+```
 
+- docker run 명령
 
+```
+docker run [옵션] 이미지_이름 /bin/bash
+```
 
+- docker exec 명령 예)
 
+```
+docker exec -it apa000ex23 /bin/bash
+```
+
+- docker run 명령 예)
+
+```
+docker run –-name apa000ex23 –it –p 8089:80 httpd /bin/bash
+```
+
+- bash를 통해 컨테이너를 조작하는 동안에는 도커 명령을 사용할 수 없다.
+- 컨테이너 조작이 끝나면 ‘exit’ 명령으로 컨테이너를 빠져나와야 한다.
+
+- 도커 엔진 명령과 컨테이너 내부에서 실행하는 명령
