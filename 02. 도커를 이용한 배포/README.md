@@ -348,3 +348,8 @@ docker save 이미지_이름 > 파일_이름.tar
 docker load -i 파일_이름.tar
 docker load < 파일_이름.tar
 ```
+
+![스크린샷 2024-12-17 오전 7 11 53](https://github.com/user-attachments/assets/28c57815-0e9a-415b-bce0-433e5f6e7aee)
+
+
+
