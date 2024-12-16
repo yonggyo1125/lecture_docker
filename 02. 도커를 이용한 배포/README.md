@@ -29,6 +29,11 @@
 ![스크린샷 2024-12-16 오후 10 29 32](https://github.com/user-attachments/assets/e3487c2e-0e4c-4f3d-bf95-e4cbd2a9469d)
 
 
+![스크린샷 2024-12-16 오후 10 31 40](https://github.com/user-attachments/assets/5f173574-2c58-4cd3-9b55-49d9cb6dc7c7)
 
 
-## - Dockerfile 스크립트에 사용되는 주요 명령
+## Dockerfile 스크립트에 사용되는 주요 명령
+
+
+![스크린샷 2024-12-16 오후 10 32 46](https://github.com/user-attachments/assets/58914c7c-5fb8-4b68-bd29-402cc28ed731)
+
