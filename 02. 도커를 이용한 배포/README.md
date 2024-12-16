@@ -328,3 +328,9 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 - 레지스터리 : 이미지를 배포하는 장소 (도커허브에 회원 가입하면서 생성되는 계정명의 이름공간)
 - 리포지터리 : 레지스트리를 구성하는 단위
 
+![스크린샷 2024-12-17 오전 7 07 04](https://github.com/user-attachments/assets/dba8df10-7511-49ee-b716-d422f15be667)
+
+![스크린샷 2024-12-17 오전 7 07 18](https://github.com/user-attachments/assets/fd8d348a-7e9c-451e-83dc-2c62f2313362)
+
+
+
