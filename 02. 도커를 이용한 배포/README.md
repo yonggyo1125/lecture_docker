@@ -299,3 +299,8 @@ CMD start.sh -h 127.0.0.1 -p ${port}
 ```
 
 - 이렇게 설정을 해주면 Docker는 프로젝트 최상위 디렉터리에 위치하고 있는 markdown 파일들을 무시하게 되므로, RUN과 CMD, COPY와 같은 명령문이 해당 파일을 사용할 수 없게 된다.
+ 
+
+![스크린샷 2024-12-16 오후 11 25 38](https://github.com/user-attachments/assets/e1ced8c5-22ab-48fc-86a3-9f22cd68a93a)
+
+
