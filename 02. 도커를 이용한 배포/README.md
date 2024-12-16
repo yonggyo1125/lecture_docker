@@ -23,3 +23,8 @@
 ![스크린샷 2024-12-16 오후 10 26 44](https://github.com/user-attachments/assets/95c99216-3a8f-4d24-902f-00e51d3f932d)
 
 ## Dockerfile 기본 지시어
+
+
+![스크린샷 2024-12-16 오후 10 28 42](https://github.com/user-attachments/assets/ba7d63ce-cba6-49fe-b999-d4fb35ce4590)
+![스크린샷 2024-12-16 오후 10 29 23](https://github.com/user-attachments/assets/809db551-3db5-4c81-8eda-e4641be2f0d6)
+![스크린샷 2024-12-16 오후 10 29 32](https://github.com/user-attachments/assets/e3487c2e-0e4c-4f3d-bf95-e4cbd2a9469d)
