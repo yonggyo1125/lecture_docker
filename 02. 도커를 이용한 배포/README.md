@@ -394,7 +394,7 @@ docker exec -it apa000ex23 /bin/bash
 - docker run 명령 예)
 
 ```
-docker run –-name apa000ex23 –it –p 8089:80 httpd /bin/bash
+docker run --name apa000ex23 -it -p 8089:80 httpd /bin/bash
 ```
 
 - bash를 통해 컨테이너를 조작하는 동안에는 도커 명령을 사용할 수 없다.
