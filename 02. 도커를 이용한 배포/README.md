@@ -9,7 +9,16 @@
 
 ![스크린샷 2024-12-16 오후 10 22 17](https://github.com/user-attachments/assets/6b8f56bf-efd9-4e84-a3a9-7634b5f2bd76)
 
+```
+docker commit pokemon yonggyo00/pokemon:1.0
+```
+
 - 로컬에 있는 도커 이미지를 도커 허브에 푸쉬한다.
+
+```
+docker push yonggyo00/pokemon:1.0
+docker inspect yonggyo00/pokemon:1.0
+```
 
 ## Dockerfile 스크립트로 이미지 생성하기
 
@@ -401,3 +410,75 @@ docker run --name apa000ex23 -it -p 8089:80 httpd /bin/bash
 - 컨테이너 조작이 끝나면 ‘exit’ 명령으로 컨테이너를 빠져나와야 한다.
 
 - 도커 엔진 명령과 컨테이너 내부에서 실행하는 명령
+
+# 포켓몬 도감 배포하기
+
+## 배포할 이미지 만들기
+
+### 도커 허브 가입하기
+
+- https://hub.docker.com/
+- 도커 허브에 가입 하고 가입한 계정명 / 비번을 꼭 기억하여야 합니다(CLI 모드에서 도커 로그인이 필요)
+- 도커 허브에 가입 하면 깃허브와 비슷한 이미지 레지스트리를 제공합니다. 여기에 다양한 레포지토리로 이미지를 관리하시면 됩니다.
+
+### 업로드된 파일을 영구 보관하기 위한 볼륨 생성하기
+
+```
+docker volume create pokemon_files
+```
+
+- pokemon_files 볼륨 생성이 완료 되면 생성 확인
+
+```
+docker volume ls
+```
+
+### 스프링 부트 빌드 하기
+
+- 하기 명령어는 인텔리제이에서 실행할 것
+
+```
+gradle clean bootJar
+```
+
+### Dockerfile 작성하기
+
+- 가장 상위 경로에 파일 생성 및 작성
+- 상위 경로는 settings.gradle 파일이 있는 경로 임
+
+- 파일명 : Dockerfile
+
+```
+FROM openjdk:17-jdk
+ARG JAR_FILE=build/libs/pokemon-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
+RUN mkdir uploads
+ENV SPRING_PROFILES_ACTIVE=default,prod,dl,email
+ENV FILE_PATH=/uploads/
+ENV FILE_URL=/uploads/
+ENV REDIS_PORT=6379
+
+ENTRYPOINT ["java", "-Ddb.host=${DB_HOST}", "-Ddb.username=${DB_USERNAME}", "-Ddb.password=${DB_PASSWORD}", "-Dddl.auto=${DDL_AUTO}", "-Ddl.data.url=${DL_DATA_URL}", "-Dfile.path-=${FILE_PATH}", "-Dfile.url=${FILE_URL}", "-Dpython.run=${PYTHON_RUN}", "-Dpython.script=${PYTHON_SCRIPT}", "-Dredis.host=${REDIS_HOST}", "-Dredis.port=${REDIS_PORT}", "-Dmail.username=${MAIL_USERNAME}", "-Dmail.password=${MAIL_PASSWORD}", "-jar", "app.jar"]
+
+EXPOSE 3000
+```
+
+### 도커 이미지 빌드 하기
+
+- AWS에 배포할 목적이므로 이미지명을 만들때는 반드시 "도커허브계정명/프로젝트명:버전" 형식으로 작성합니다.
+- 예) yonggyo00/pokemon:1.0.0
+
+```
+docker build -t 도커허브계정명/pokemon:1.0.0
+```
+
+### 도커 컨테이너 동작 여부 테스트
+
+- 192.168.1.101는 로컬 PC 사설 IP 주소 입니다. AWS 서버에는 브릿지 네트워크를 설정하여 오라클, 레디스 컨테이너를 접근합니다.
+- 테스트만을 위한 것이므로 각 환경 변수의 계정 및 비밀번호는 프로젝트에 맞게 변경하세요.
+
+```
+docker run -d --name pokemon -p 3000:3000 -e DB_HOST="192.168.1.101:1522" -e DB_USERNAME=pokemon -e DB_PASSWORD=비밀번호 -e DDL_AUTO=update -e DL_DATA_URL="http://localhost:3000/api/dl/data" -e PYTHON_RUN="C:/Users/admin/AppData/Local/Programs/Python/Python39/python.exe" -e PYTHON_SCRIPT="D:/recommend/" -e REDIS_HOST="192.168.1.101" -e MAIL_USERNAME=계정 -e MAIL_PASSWORD=비밀번호 -v pokemon_files:/uploads 도커허브 계정명/pokemon:1.0.0
+```
+
+## AWS에 배포하기
