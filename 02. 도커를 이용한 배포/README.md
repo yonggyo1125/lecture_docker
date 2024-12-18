@@ -481,4 +481,14 @@ docker build -t 도커허브계정명/pokemon:1.0.0
 docker run -d --name pokemon -p 3000:3000 -e DB_HOST="192.168.1.101:1522" -e DB_USERNAME=pokemon -e DB_PASSWORD=비밀번호 -e DDL_AUTO=update -e DL_DATA_URL="http://localhost:3000/api/dl/data" -e PYTHON_RUN="C:/Users/admin/AppData/Local/Programs/Python/Python39/python.exe" -e PYTHON_SCRIPT="D:/recommend/" -e REDIS_HOST="192.168.1.101" -e MAIL_USERNAME=계정 -e MAIL_PASSWORD=비밀번호 -v pokemon_files:/uploads 도커허브 계정명/pokemon:1.0.0
 ```
 
+### 도커 허브에 올리기
+
+- docker login을 통해서 도커 허브에 연결 합니다. 윈도우즈의 경우는 PC 인증으로 진행이 되며
+- 리눅스 CLI에서는 login 계정을 입력해서 로그인 합니다.
+
+```
+docker logn
+docker push 도커허브 계정명/pokemon:1.0.0
+```
+
 ## AWS에 배포하기
