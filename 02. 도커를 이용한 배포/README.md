@@ -496,3 +496,145 @@ docker push 도커허브 계정명/pokemon:1.0.0
 
 
 ## AWS에 배포하기
+
+- EC2 / Ubuntu 선택하기 
+- 설정을 위해 관리자 계정으로 사용자 변경 
+
+```
+sudo -s
+```
+
+### 스왑 공간 설정 
+- 인스턴스가 t2.micro로 선택한 경우 램 1GB로 다소 부족합니다. 스왑 메모리가 기본 0으로 설정되어 있어 램 1GB가 다 차면 서버는 다운되어 접속이 불가능해 집니다. 이런 경우를 방지하기 위해 약 4GB 정도로 스왑 공간을 늘려줍니다.
+
+```
+dd if=/dev/zero of=/swapfile bs=128M count=32
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+```
+
+- 파일 시스템 설정 편집에 들어간 후 
+```
+vi /etc/fstab
+```
+
+- 다음과 같이 설정하여 재부팅 후에도 스왑 공간이 유지되도록 합니다.
+
+```
+/swapfile swap swap defaults 0 0
+```
+
+### 도커 설치 
+
+- 우분투 시스템 패키지 업데이트
+
+```
+sudo apt-get update
+```
+
+- 필요한 패키지 설치
+
+```
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+```
+
+- Docker의 공식 GPG키를 추가
+
+```agsl
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+- Docker의 공식 apt 저장소를 추가
+
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+
+- 시스템 패키지 업데이트
+
+```
+sudo apt-get update
+```
+
+- Docker 설치
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+- Docker가 설치 확인
+
+```
+sudo systemctl status docker
+```
+
+### 배포시 필요한 이미지 다운받기
+
+-  도커 허브에 포켓몬 배포 이미지 다운받기 
+
+```
+docker pull yonggyo00/pokemon
+```
+
+- oracle-xe 이미지 다운받기
+
+```
+docker pull gvenzl/oracle-xe:18
+```
+
+- redis 이미지 다운받기
+
+```
+docker pull redis
+```
+
+### 영구 저장 영역을 위한 볼륨 생성 
+- 파일 업로드 볼륨 생성 
+
+```
+docker volume create pokemon_files
+```
+
+- 오라클 DB 저장 볼륨 생성
+
+```
+docker volume create oracle_db
+```
+
+### 오라클 및 레디스 컨테이너 생성 및 실행 
+
+- oralce-xe 
+
+```
+docker run -d --name oracle-xe -p 1521:1521 -e ORACLE_PASSWORD=oracle -v oracle_db:/opt/oracle/oradata gvenzl/oracle-xe:18
+```
+
+- redis
+
+```
+docker run -d --name redis -p 6379:6379 redis
+```
+
+- 오라클 POKEMON 스키마 생성 
+
+```
+docker exec -it oracle-xe bash
+```
+
+```
+sqlplus system/oracle
+CREATE USER POKEMON IDENTIFIED BY oracle QUOTA UNLIMITED ON USERS;
+GRANT RESOURCE, CONNECT TO POKEMON;
+
+exit;
+exit;
+```
+
+
+### 포켓몬 배포 컨테이너 생성 및 실행
+
+```
+docker run -d --name pokemon -p 3000:3000 -e DB_HOST="172.31.3.129:1521" -e DB_USERNAME=pokemon -e DB_PASSWORD=oracle -e DDL_AUTO=update -e DL_DATA_URL="http://localhost:3000/api/dl/data" -e PYTHON_RUN="..." -e PYTHON_SCRIPT="..." -e REDIS_HOST="172.31.3.129" -e MAIL_USERNAME=yonggyo1981 -e MAIL_PASSWORD=dbjrrncvlldimycz -v pokemon_files:/uploads yonggyo00/pokemon
+```
