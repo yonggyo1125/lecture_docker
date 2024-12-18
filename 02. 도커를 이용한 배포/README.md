@@ -491,4 +491,8 @@ docker logn
 docker push 도커허브 계정명/pokemon:1.0.0
 ```
 
+![1](https://github.com/user-attachments/assets/00681ead-61fe-42da-ab91-0fa963fbe518)
+
+
+
 ## AWS에 배포하기
